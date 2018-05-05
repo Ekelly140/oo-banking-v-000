@@ -6,4 +6,12 @@ class Transfer
     @amount = amount 
     @status = "pending"
   end 
+  
+  def valid?
+    if sender.balance >= amount
+      true 
+    else 
+      false 
+    end 
+  end 
 end
